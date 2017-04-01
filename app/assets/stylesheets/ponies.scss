@@ -1,3 +1,22 @@
 // Place all the styles related to the Ponies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$marginTop: 5px;
+#td-button {
+  margin-right: 10px;
+}
+
+#pony-submit {
+  margin-left: 230px;
+}
+
+#pony-row-button {
+  margin-left: 185px;
+  margin-top: $marginTop;
+}
+
+#pony-row-button-back {
+  margin-left: 225px;
+  margin-top: $marginTop;
+}

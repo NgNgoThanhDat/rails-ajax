@@ -1,4 +1,5 @@
-<%= form_for(pony) do |f| %>
+<%= form_for @pony do |f| %>
+
   <% if pony.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(pony.errors.count, "error") %> prohibited this pony from being saved:</h2>
@@ -11,17 +12,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="row">
+    <div class="small-5">
+      <div class="row">
+        <div class="small-2 columns">
+          <%= f.label :name, class: "text-right middle" %>
+        </div>
+        <div class="small-10 columns">
+          <%= f.text_field :name %>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-5">
+      <div class="row">
+        <div class="small-2 columns">
+          <%= f.label :profession, class: "text-right middle" %>
+        </div>
+        <div class="small-10 columns">
+          <%= f.text_area :profession %>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-5">
+      <div class="row">
+        <div class="small-2 columns">
+        </div>
+        <div class="small-10 columns">
+          <%= f.submit :class => "button primary hollow" %>
+          <%= link_to 'Cancel', ponies_path, :class => "button alert" %>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :profession %>
-    <%= f.text_area :profession %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

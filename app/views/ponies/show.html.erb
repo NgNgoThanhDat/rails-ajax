@@ -1,14 +1,23 @@
+<h1>Showing Pony</h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @pony.name %>
-</p>
+<table class="stack hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Profession</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Profession:</strong>
-  <%= @pony.profession %>
-</p>
-
-<%= link_to 'Edit', edit_pony_path(@pony) %> |
-<%= link_to 'Back', ponies_path %>
+  <tbody>
+    <tr>
+      <td><%= @pony.name %></td>
+      <td><%= @pony.profession %></td>
+      <td class="button-group">
+        <%= link_to 'Edit', edit_pony_path(@pony), :class => "button secondary hollow", :id => "td-button" %>
+        <%= link_to 'Cancel', ponies_path, :class => "button alert" %>
+      </td>
+    </tr>
+  </tbody>
+</table>
