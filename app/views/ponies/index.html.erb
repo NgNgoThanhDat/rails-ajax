@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Ponies</h1>
-<%= link_to 'New Pony', new_pony_path, :class => "button button primary hollow button" %>
+<%= link_to 'New Pony', new_pony_path, :class => "button primary hollow" %>
 
 <table class="stack hover">
   <thead>
@@ -18,8 +18,8 @@
         <td><%= pony.name %></td>
         <td><%= pony.profession %></td>
         <td class="button-group">
-          <%= link_to 'Show', pony, :class => "button button primary hollow button", :id => "td-button" %>
-          <%= link_to 'Edit', edit_pony_path(pony), :class => "button secondary button hollow button", :id => "td-button" %>
+          <%= link_to 'Show', pony, :class => "button primary hollow", :id => "td-button" %>
+          <%= link_to 'Edit', edit_pony_path(pony), :class => "button secondary hollow", :id => "td-button" %>
           <%= link_to 'Destroy', pony, method: :delete, data: { confirm: 'Are you sure?' },
           :remote => true, :class => "delete_pony alert button" %>
         </td>
